@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Догрузыч — свой человек в логистике для малого бизнеса</title>
+    <meta
+      name="description"
+      content="Догрузыч помогает малому бизнесу перевозить 1–10 паллет, небольшие партии и малотоннажные грузы без переплаты за целую фуру. Сервис от ЮНИ ТМ."
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Догрузыч — на главную">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img">
+            <path d="M10 34h29l4 11h6a7 7 0 0 0-14 0H25a7 7 0 0 0-14 0h-1V34Z" fill="currentColor" />
+            <path d="M39 26h10l7 8v11h-7l-4-11h-6v-8Z" fill="currentColor" opacity=".72" />
+            <path d="M16 22h20v9H16z" fill="currentColor" opacity=".18" />
+            <circle cx="18" cy="45" r="4" fill="#fff" />
+            <circle cx="42" cy="45" r="4" fill="#fff" />
+          </svg>
+        </span>
+        <span>
+          <strong>Догрузыч</strong>
+          <small>сервис ЮНИ ТМ</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#calculator">Визуализатор</a>
+        <a href="#who">Кому подходит</a>
+        <a href="#process">Как работаем</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="header-cta" href="#lead">Рассчитать</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero__content">
+          <p class="eyebrow">Догрузы, паллеты и малые партии без лишней бюрократии</p>
+          <h1>Свой человек в логистике для малого бизнеса</h1>
+          <p class="hero__lead">
+            Догрузыч помогает перевезти 1–10 паллет, коробки, оборудование, мебель и небольшие партии груза без переплаты за целую фуру и без поиска перевозчиков.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#calculator">Прикинуть перевозку</a>
+            <a class="button button--ghost" href="#lead">Написать Догрузычу</a>
+          </div>
+          <ul class="trust-list" aria-label="Преимущества">
+            <li>Один ответственный логист</li>
+            <li>Подбор догруза или газели</li>
+            <li>Контроль маршрута А → Б</li>
+          </ul>
+        </div>
+        <div class="hero-card" aria-label="Пример заявки">
+          <div class="chat-bubble chat-bubble--client">Нужно перевезти 4 паллеты из Тулы в Казань. Фуру брать дорого 😬</div>
+          <div class="chat-bubble chat-bubble--dogruzych">Спокойно. Посмотрю догруз, газель и сроки. Вы занимаетесь бизнесом — я логистикой.</div>
+          <div class="mini-route"><span>Точка А</span><i></i><span>Точка Б</span></div>
+        </div>
+      </section>
+
+      <section class="pain-grid section" aria-labelledby="pain-title">
+        <div class="section-heading">
+          <p class="eyebrow">Когда груз небольшой, проблем почему-то много</p>
+          <h2 id="pain-title">Догрузыч нужен, если вы устали каждый раз начинать логистику с нуля</h2>
+        </div>
+        <div class="cards cards--pain">
+          <article>Опять искать машину и сравнивать непонятные цены.</article>
+          <article>Не хочется платить за целую фуру ради пары паллет.</article>
+          <article>Нужен человек, которому можно просто написать.</article>
+          <article>Нет штатного логиста, а груз должен доехать вовремя.</article>
+        </div>
+      </section>
+
+      <section id="calculator" class="calculator section" aria-labelledby="calculator-title">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">Интерактивный блок заявки</p>
+          <h2 id="calculator-title">Введите параметры груза — Догрузыч покажет, как он может лечь в транспорт</h2>
+          <p>Это предварительная визуализация: она помогает быстро понять, похож груз на догруз, газель или задачу под отдельную машину.</p>
+        </div>
+
+        <div class="calc-shell">
+          <form class="cargo-form" id="cargoForm">
+            <div class="form-row form-row--split">
+              <label>Точка А<input id="fromCity" type="text" value="Москва" autocomplete="address-level2" /></label>
+              <label>Точка Б<input id="toCity" type="text" value="Казань" autocomplete="address-level2" /></label>
+            </div>
+            <div class="form-row form-row--grid">
+              <label>Длина, м<input id="length" type="number" min="0.1" max="13.6" step="0.1" value="1.2" /></label>
+              <label>Ширина, м<input id="width" type="number" min="0.1" max="2.45" step="0.1" value="0.8" /></label>
+              <label>Высота, м<input id="height" type="number" min="0.1" max="2.7" step="0.1" value="1.5" /></label>
+              <label>Вес, кг<input id="weight" type="number" min="1" max="22000" step="10" value="650" /></label>
+            </div>
+            <label>Комментарий<input id="comment" type="text" placeholder="Например: 4 паллеты, мебель, нужна аккуратная погрузка" /></label>
+            <a class="button button--primary button--wide" id="requestLink" href="#lead">Отправить параметры Догрузычу</a>
+            <p class="form-note">Не знаете точные размеры? Укажите примерно — логист поможет разобраться.</p>
+          </form>
+
+          <div class="visualizer" aria-live="polite">
+            <div class="route-card">
+              <span id="routeA">Москва</span>
+              <div class="route-line"><b></b></div>
+              <span id="routeB">Казань</span>
+            </div>
+
+            <div class="transport-tabs" role="tablist" aria-label="Варианты транспорта">
+              <button class="is-active" type="button" data-target="truck">Фура</button>
+              <button type="button" data-target="gazelle">Газель</button>
+            </div>
+
+            <div class="transport-layouts">
+              <article class="transport-card is-active" id="truckView">
+                <div class="transport-card__top">
+                  <strong>В фуре</strong>
+                  <span>13.6 × 2.45 м / до 20 т</span>
+                </div>
+                <div class="cargo-bay cargo-bay--truck" id="truckBay"><div class="cargo-box" id="truckCargo">Ваш груз</div></div>
+                <p id="truckResult" class="result-text"></p>
+              </article>
+
+              <article class="transport-card" id="gazelleView">
+                <div class="transport-card__top">
+                  <strong>В газели</strong>
+                  <span>4.2 × 2.0 м / до 1.5 т</span>
+                </div>
+                <div class="cargo-bay cargo-bay--gazelle" id="gazelleBay"><div class="cargo-box" id="gazelleCargo">Ваш груз</div></div>
+                <p id="gazelleResult" class="result-text"></p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="who" class="section split-section">
+        <div>
+          <p class="eyebrow">Кому подходит</p>
+          <h2>Если у вас нет отдела логистики — это нормально. Теперь есть Догрузыч.</h2>
+        </div>
+        <div class="check-list">
+          <p>Возите 1–10 паллет или небольшие партии.</p>
+          <p>Не хотите оплачивать целую машину без необходимости.</p>
+          <p>Работаете с мебелью, оборудованием, маркетплейсами, производством или оптом.</p>
+          <p>Хотите одного ответственного человека, а не колл-центр.</p>
+        </div>
+      </section>
+
+      <section id="process" class="section process" aria-labelledby="process-title">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">Как работаем</p>
+          <h2 id="process-title">Вы пишете задачу — Догрузыч собирает решение</h2>
+        </div>
+        <ol class="steps">
+          <li><span>1</span><strong>Вы описываете груз</strong><p>Маршрут, размеры, вес, сроки и пожелания.</p></li>
+          <li><span>2</span><strong>Мы подбираем формат</strong><p>Догруз, газель, малотоннажный транспорт или отдельная машина.</p></li>
+          <li><span>3</span><strong>Согласуем стоимость</strong><p>Объясняем, за что платите, и где можно не переплачивать.</p></li>
+          <li><span>4</span><strong>Контролируем доставку</strong><p>Держим связь до получения груза в точке Б.</p></li>
+        </ol>
+      </section>
+
+      <section class="section brand-proof">
+        <div>
+          <p class="eyebrow">Не отдельная шарашка</p>
+          <h2>Догрузыч — маркетинговый сервис компании ЮНИ ТМ</h2>
+          <p>Юридически и организационно перевозку сопровождает ООО «ЮНИ ТРАНС МЕНЕДЖМЕНТ». Догрузыч — это более простой вход для малого бизнеса: меньше бюрократии, больше человеческого общения и один логист рядом.</p>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Частые вопросы</h2>
+        </div>
+        <details open><summary>Можно отправить одну паллету?</summary><p>Да. Догрузыч как раз создан для небольших партий: от одной паллеты до регулярных малотоннажных отправок.</p></details>
+        <details><summary>Если груз не помещается в газель?</summary><p>Мы покажем это в визуализаторе и предложим другой формат: догруз, малотоннажный транспорт или отдельную машину.</p></details>
+        <details><summary>Нужно знать точные размеры?</summary><p>Желательно, но не обязательно для первого обращения. Можно указать примерно, а логист поможет уточнить параметры.</p></details>
+      </section>
+
+      <section id="lead" class="lead section">
+        <div>
+          <p class="eyebrow">Финальный шаг</p>
+          <h2>Расскажите, что нужно перевезти — Догрузыч подскажет, как выгоднее</h2>
+          <p>Оставьте маршрут и параметры груза. Мы вернемся с вариантом перевозки, сроками и ориентиром по стоимости.</p>
+        </div>
+        <form class="lead-form">
+          <input aria-label="Имя" placeholder="Ваше имя" />
+          <input aria-label="Телефон или мессенджер" placeholder="Телефон / WhatsApp / Telegram" />
+          <textarea aria-label="Задача" id="leadMessage" placeholder="Маршрут, груз, вес, размеры, сроки"></textarea>
+          <button class="button button--primary" type="button">Получить расчет</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Догрузыч</strong>
+      <span>Свой человек в логистике для малого бизнеса. Сервис ООО «ЮНИ ТРАНС МЕНЕДЖМЕНТ».</span>
+    </footer>
+
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
